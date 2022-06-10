@@ -1,0 +1,128 @@
+html {
+  background-color: #d1dedd;
+}
+
+body {
+  margin: 0;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+header {
+  background-color: #fff;
+  padding: 10px;
+}
+nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  align-items: center;
+}
+h3 {
+  text-align: center;
+  padding: 20px;
+}
+p {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+a:hover {
+  color: palevioletred;
+}
+nav h1 {
+  text-transform: uppercase;
+  line-height: 1em;
+}
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 250px;
+  gap: 30px;
+}
+main div {
+  overflow: hidden;
+  background: #fff;
+  border-radius: 6px;
+  border: 5px solid #fff;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+main img {
+  min-width: 100%;
+  height: 100%;
+}
+main .short {
+  grid-row: span 1;
+}
+main .tall {
+  grid-row: span 2;
+}
+.long {
+  grid-row: span 2;
+  /* grid-column: span 1; */
+  width: 100%;
+}
+/* responsive */
+@media screen and (max-width: 1280px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 1220px) {
+  main {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  nav h1 {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+  }
+}
+
+@media screen and (max-width: 607px) {
+  .long {
+    grid-template-columns: 1fr;
+    max-width: fit-content;
+    margin: 20px auto;
+  }
+}
+
+.wide {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.about {
+  padding: 100px;
+}
+
+/* footer */
+
+footer {
+  background-color: #fff;
+  padding: 10px;
+}
+.foot {
+  text-align: center;
+}
+.chel {
+  color: palevioletred;
+  text-decoration: none;
+}
+/* icons */
+
+i {
+  color: black;
+}
